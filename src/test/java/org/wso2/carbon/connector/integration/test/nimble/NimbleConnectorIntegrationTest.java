@@ -45,7 +45,7 @@ public class NimbleConnectorIntegrationTest extends ESBIntegrationTest {
     private MediationLibraryAdminServiceStub adminServiceStub = null;
     private ProxyServiceAdminClient proxyAdmin;
     private String repoLocation = null;
-    private String nimbleConnectorFileName = "nimble-connector-1.0.0.zip";
+    private String nimbleConnectorFileName = "nimble-connector-1.0.1-SNAPSHOT.zip";
     private Properties nimbleConnectorProperties = null;
     private String pathToProxiesDirectory = null;
     private String pathToRequestsDirectory = null;
