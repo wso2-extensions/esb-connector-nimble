@@ -16,19 +16,17 @@
  ~  specific language governing permissions and limitations
  ~  under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.wso2.carbon.connector</groupId>
     <artifactId>org.wso2.carbon.connector.nimble</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>WSO2 Carbon - Mediation Library Connector For Nimble</name>
     <url>http://wso2.org</url>
     <properties>
         <connector.name>nimble</connector.name>
-        <connector.version>1.0.0</connector.version>
         <test.framework.version>4.2.0</test.framework.version>
         <esb.version>4.9.0</esb.version>
         <carbon.kernel.version>4.4.1</carbon.kernel.version>
@@ -181,7 +179,7 @@
                             <goal>attached</goal>
                         </goals>
                         <configuration>
-                            <finalName>${connector.name}-connector-${connector.version}</finalName>
+                            <finalName>${connector.name}-connector-${version}</finalName>
                             <appendAssemblyId>false</appendAssemblyId>
                             <filters>
                                 <filter>${basedir}/src/main/assembly/filter.properties</filter>
@@ -211,7 +209,7 @@
                     <systemProperties>
                         <property>
                             <name>framework.resource.location</name>
-                            <value> ${basedir}/src/test/resources/
+                            <value>${basedir}/src/test/resources/
                             </value>
                             <properties>
                                 <test.framework.version>${carbon.platform.version}</test.framework.version>
@@ -219,7 +217,7 @@
                         </property>
                         <property>
                             <name>server.list</name>
-                            <value> ESB
+                            <value>ESB
                             </value>
                         </property>
                         <property>
@@ -228,7 +226,7 @@
                         </property>
                         <sec.verifier.dir>${basedir}/target/security-verifier/</sec.verifier.dir>
                         <maven.test.haltafterfailure>false</maven.test.haltafterfailure>
-                        <carbon.zip> ${basedir}/repository/wso2esb-${esb.version}.zip
+                        <carbon.zip>${basedir}/repository/wso2esb-${esb.version}.zip
                         </carbon.zip>
                         <emma.home>${basedir}/target/emma</emma.home>
                         <instr.file>${basedir}/src/test/resources/instrumentation.txt</instr.file>
@@ -257,7 +255,6 @@
                             <includeArtifactIds>emma,org.wso2.carbon.automation.core</includeArtifactIds>
                         </configuration>
                     </execution>
-
                     <execution>
                         <id>copy-jar-dependencies</id>
                         <phase>compile</phase>
@@ -286,7 +283,6 @@
                             <stripVersion>true</stripVersion>
                         </configuration>
                     </execution>
-
                     <execution>
                         <id>unpack-mar-jks</id>
                         <phase>compile</phase>
@@ -307,8 +303,6 @@
                             </resources>
                         </configuration>
                     </execution>
-
-
                 </executions>
             </plugin>
             <plugin>
@@ -422,7 +416,7 @@
                             </outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory> ${basedir}/target/tobeCopied/wso2esb-${esb.version}/repository/samples/
+                                    <directory>${basedir}/target/tobeCopied/wso2esb-${esb.version}/repository/samples/
                                     </directory>
                                     <includes>
                                         <include>**/*.xml</include>
@@ -435,7 +429,6 @@
             </plugin>
         </plugins>
     </build>
-
     <repositories>
         <repository>
             <id>wso2-nexus</id>
