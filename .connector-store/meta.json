@@ -4,7 +4,7 @@
     "category": "Customer Relationship Management",
     "documentationUrl": "https://docs.wso2.com/display/ESBCONNECTORS/Nimble+Connector",
     "description": "The Nimble connector allows you to access the Nimble REST API through WSO2 ESB. Nimble is a social relationship management tool that brings together your contacts from many different locations into one place and helps you nurture the new and important contacts in your network.",
-    "status": "Unsupported",
+    "status": "Active",
     "labels": [
         "connector"
     ],
